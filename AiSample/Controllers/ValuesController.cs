@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.ApplicationInsights;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +11,13 @@ namespace AiSample.Controllers
 {
     public class ValuesController : ApiController
     {
+        private TelemetryClient _telemetryClient;
+
+        public ValuesController()
+        {
+            _telemetryClient = new TelemetryClient();
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
@@ -18,7 +27,21 @@ namespace AiSample.Controllers
         // GET api/values/5
         public string Get(int id)
         {
-            return "value";
+            try
+            {
+                throw new Exception("Test Exception");
+            }
+            catch(Exception e)
+            {
+                var properties = new Dictionary<string, string>
+                {
+                    { "requestParameters", "some data"},
+                };
+
+                _telemetryClient.TrackException(e, properties);
+
+                return "exception logged";
+            }
         }
 
         // POST api/values
