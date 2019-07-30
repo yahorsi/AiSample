@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AiSample.SDK": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:8099"
+    }
+  }
+}
