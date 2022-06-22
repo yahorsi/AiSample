@@ -23,7 +23,7 @@
     <PackageReference Include="Microsoft.Configuration.ConfigurationBuilders.Environment" Version="1.0.2" />
     
     <PackageReference Include="Microsoft.Rest.ClientRuntime" Version="2.3.20" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     
     <PackageReference Include="Microsoft.ApplicationInsights.Wcf" Version="0.28.0-build06820" />
     <PackageReference Include="Microsoft.ApplicationInsights" Version="2.10.0" />
@@ -51,7 +51,7 @@
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" version="2.0.1" />
     <PackageReference Include="Microsoft.Web.Infrastructure" version="1.0.0.0" />
     <PackageReference Include="Modernizr" version="2.8.3" />
-    <PackageReference Include="Newtonsoft.Json" version="12.0.2" />
+    <PackageReference Include="Newtonsoft.Json" version="13.0.1" />
     <PackageReference Include="popper.js" version="1.14.0" />
     <PackageReference Include="System.Diagnostics.DiagnosticSource" version="4.5.1" />
     <PackageReference Include="WebGrease" version="1.6.0" />
